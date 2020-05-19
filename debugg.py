@@ -33,7 +33,7 @@ while x < 3:
     print(f"Guess a higher number than {numberGuessed}")
     x+= 1
   elif numberGuessed > rand:
-    print("guess a lower number {num}")
+    print(f"guess a lower number {numberGuessed}")
     x+= 1
     
 if x == 3:
