@@ -1,11 +1,14 @@
+import http
+import sys
+
 # dictionaries
 SUFFIXES = {1000: ['KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'],
             1024: ['KiB', 'MiB', 'GiB', 'TiB', 'PiB', 'EiB', 'ZiB', 'YiB']}
 
 # Instead of the word `function`, in Python, you use `def`
 def approximate_size(size, a_kilobyte_is_1024_bytes=True):
-
-    '''Convert a file size to human-readable form.
+#doc 
+    '''Convert a file size to human-readable form
 
     Keyword arguments:
     size -- file size in bytes
@@ -28,6 +31,6 @@ def approximate_size(size, a_kilobyte_is_1024_bytes=True):
 
 if __name__ == '__main__':
     print(approximate_size(16384, False))
-    print(approximate_size(size=16384, a_kilobyte_is_1024_bytes=True))
+    print(approximate_size(16384, a_kilobyte_is_1024_bytes=True))
     print(approximate_size(-16384))
 	
